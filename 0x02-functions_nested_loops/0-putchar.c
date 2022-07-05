@@ -1,28 +1,21 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * main - check the code for Holberton School students.
- * Return: Always 0.
+* main -  prints _purtchar, followed by a new line
+* Return: Always 0 (Success)
 */
-
 int main(void)
 
 {
 
-char holberton[] = "Holberton";
-
-int i;
-
-for (i = 0; holberton[i] != '\0'; i++)
-
-{
-
-_putchar(holberton[i]);
-
-}
-
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
 _putchar('\n');
 
 return (0);
-
-}
