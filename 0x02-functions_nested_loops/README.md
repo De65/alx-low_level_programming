@@ -1,1 +1,2 @@
-C functions and nested loops
+Functions and nested loops
+ALX C programming
