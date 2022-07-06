@@ -1,1 +1,1 @@
-C debugging course
+Debuging task
