@@ -1,24 +1,22 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * leet - convert lowercase to uppercase
- * @s: array of char
- * Description:  function that encodes a string into 1337.
- * Return: char string
+ * leet - function that encode a string
+ * @str: string that will be encoded
+ * Return: returns encoded string
  */
-char *leet(char *s)
+char *leet(char *str)
 {
-char letras[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-char numeros[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
-int i, j;
+int index1 = 0, index2;
+char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-for (i = 0; s[i] != '\0' ; i++)
+while (str[++index1])
 {
-for (j = 0; letras[j] != '\0' ; j++)
+for (index2 = 0; index2 <= 7; index2++)
 {
-if (s[i] == letras[j])
-s[i] = numeros[j];
+if (str[index1] == leet[index2] ||
+str[index1] - 32 == leet[index2])
+str[index1] = index2 + '0';
 }
 }
-return (s);
+return (str);
 }
