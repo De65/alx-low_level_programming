@@ -1,2 +1,1 @@
-Functions and nested loops
-ALX C programming
+My functions nested loops project
