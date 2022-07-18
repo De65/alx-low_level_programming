@@ -1,1 +1,1 @@
-I am learning variables, if, else and while
+My project on variables, if, else and while

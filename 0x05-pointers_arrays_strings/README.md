@@ -1,1 +1,1 @@
-ALX pointers and arrays project
+My pointers, arrays and strings project

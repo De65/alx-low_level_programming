@@ -1,1 +1,1 @@
-More of pointers, arrays and strings tasks
+More of pointers, arrays and strings project
