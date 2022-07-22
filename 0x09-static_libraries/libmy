@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(void)
+{
+printf("Hello World!");
+printf("I am learning c.");
+printf("I enjoy learning coding");
+return 0;
+}
+int main (void)
+{
+printf("Hello World!\nI am learning c.\nI enjoy learning coding");
+return 0;
+}
