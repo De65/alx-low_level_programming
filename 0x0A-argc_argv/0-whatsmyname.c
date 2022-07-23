@@ -1,15 +1,13 @@
 #include <stdio.h>
-#include "main.h"
 /**
- * main - prints its name + \n
- * @argc: number of arguments typed
- * @argv: array pointing to arguements
- * Return: 0
+ * main - check the code for Holberton School students.
+ * @argc : argc contains the number of arguments passed to the program
+ * @argv : A vector is a one-dimensional array
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	argc = 0;
-
-	printf("%s\n", argv[argc]);
-	return (0);
+if (argc > 0)
+printf("%s\n", argv[0]);
+return (0);
 }
