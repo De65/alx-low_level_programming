@@ -1,18 +1,13 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 /**
- * main - Entry Point
- * @argc: arguments
- * @argv: array pointing to arguments
- * Return: 0
+ * main - check the code for Holberton School students.
+ * @argc : argc contains the number of arguments passed to the program
+ * @argv : A vector is a one-dimensional array
+ * Return: Always 0.
  */
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-	}
-	printf("%d\n", i - 1);
-	return (0);
+printf("%d\n", argc - 1);
+return (0);
 }
