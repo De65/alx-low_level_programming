@@ -1,47 +1,42 @@
+#include "main.h"
 #include <stdlib.h>
+
 /**
- * _realloc - function that creates an array of integers.
- * @ptr: number of elements
- * @old_size: old size of element
- * @new_size: new size to assig
- * Description: function that creates an array of integers.
- * Return: pointer with new size
+ * _realloc - reallocates a memory block using malloc and free.
+ * @ptr: pointer to previously allocated memory
+ * @old_size: size of allocated space for ptr
+ * @new_size: size of newly allocated space
+ *
+ * Return: pointer to newly allocated memory, or NULL if failure
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-char *nptr, *p;
-unsigned int c;
+	char *p;
+	unsigned int i, max = new_size;
+	char *oldp = ptr;
 
-if (old_size == new_size)
-return (ptr);
+	if (ptr == NULL)
+	{
+		p = malloc(new_size);
+		return (p);
+	}
+	else if (new_size == 0)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	else if (new_size == old_size)
+		return (ptr);
 
-if (new_size == 0 && ptr != NULL)
-{
-free(ptr);
-return (NULL);
-}
-else if (ptr == NULL && old_size != 0)
-new_size = old_size;
+	p = malloc(new_size);
+	if (p == NULL)
+		return (NULL);
+	if (new_size > old_size)
+		max = old_size;
+	for (i = 0; i < max; i++)
+		p[i] = oldp[i];
 
-p = ptr;
-nptr = malloc(sizeof(char) * new_size);
-
-if (nptr == NULL)
-return (NULL);
-
-if (p == NULL)
-return (nptr);
-
-if (new_size > old_size)
-{
-for (c = 0 ; c <= old_size ; c++)
-nptr[c] = p[c];
-}
-else
-{
-for (c = 0 ; c < new_size ; c++)
-nptr[c] = p[c];
-}
-free(p);
-return (nptr);
+p[i + 1] = '\0';
+	free(ptr);
+	return (p);
 }
