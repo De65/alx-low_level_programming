@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
+#include "main.c"
 /**
  * main - use of macro _FILE_.
  * Return: Always 0.
