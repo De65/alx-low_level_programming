@@ -32,7 +32,7 @@ putchar(name[i] + 'A' - 'a');
 }
 else
 {
-putchar(name[i]);
+putchar(name[i])
 }
 i++;
 }
