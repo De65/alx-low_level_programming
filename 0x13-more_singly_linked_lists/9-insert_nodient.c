@@ -1,44 +1,43 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - sum of all the data (n)
- * @head: head of list
- * @idx: index of node
- * @n: integer
- * Description: sum of all the data (n) of a listint_t linked list.
- * Return: node
+ * insert_nodeint_at_index - Entry Point
+ * @head: head
+ * @idx: index
+ * @n: data
+ * Return: 0
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-listint_t *node = NULL;
-listint_t *actual = *head;
-unsigned int cont = 1;
+	unsigned int count = 0;
 
-if (head == NULL)
-return (NULL);
+	listint_t *new;
+	listint_t *temp;
 
-node = malloc(sizeof(listint_t));
-if (node == NULL)
-return (NULL);
+	if (*head == NULL)
+		return (NULL);
 
-node->n = n;
-node->next = NULL;
-if (idx == 0)
-{
-node->next = *head;
-*head = node;
-return (node);
-}
+	temp = *head;
 
-while (actual != NULL)
-{
-if (idx == cont)
-{
-node->next = actual->next;
-actual->next = node;
-return (node);
-}
-cont++;
-actual = actual->next;
-}
-return (NULL);
+	while (temp != NULL)
+	{
+		if (count == idx - 1)
+		{
+			new = malloc(sizeof(listint_t));
+			if (new == NULL)
+			{
+				return (NULL);
+			}
+			else
+			{
+				new->n = n;
+				new->next = temp->next;
+				temp->next = new;
+				return (new);
+			}
+		}
+		if (temp->next != NULL)
+			temp = temp->next;
+		count++;
+	}
+	return (NULL);
 }
